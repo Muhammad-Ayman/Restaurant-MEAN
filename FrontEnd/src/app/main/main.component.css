@@ -1,0 +1,16 @@
+main {
+  width: 100vh;
+  min-height: 80vh;
+  margin: auto;
+  display: border-box;
+}
+
+.container {
+  display: border-box;
+
+  margin: auto;
+  text-align: center;
+
+  width: 100%;
+  position: absolute;
+}
