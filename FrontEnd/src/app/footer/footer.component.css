@@ -1,0 +1,118 @@
+footer {
+  height: 550px;
+  width: 100%;
+  background-color: #474747;
+  color: white;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.first-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+h4 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: italic;
+  font-size: 30px;
+}
+p {
+  width: 293px;
+  color: #adb29e;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  text-align: center;
+}
+
+.second-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+header {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.third-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+a {
+  color: #adb29e;
+}
+a:hover {
+  color: #5c5656;
+}
+
+.fourth-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.fourth-part h2 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.ig-imgs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Four columns of equal width */
+  gap: 10px;
+}
+
+.img {
+  width: 100%; /* Makes the images fill their containers */
+  height: 130px;
+  aspect-ratio: 1; /* Keeps the images square */
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+}
+
+.img:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.final {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+hr {
+  background-color: #414536;
+  width: 80vw;
+}

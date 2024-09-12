@@ -23,3 +23,7 @@ header img {
   justify-content: center;
   gap: 1px !important;
 }
+
+header p {
+  color: white;
+}

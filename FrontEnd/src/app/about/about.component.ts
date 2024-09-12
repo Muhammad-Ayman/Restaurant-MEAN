@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-about',
   standalone: true,
   imports: [],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.css',
 })
-export class HeaderComponent {
+export class AboutComponent {
   mail = 'i.muhammadayman@gmail.com';
   phone = '(+20)100-157-9573';
 }
