@@ -1,0 +1,35 @@
+.container {
+  background-color: #f9f9f7;
+  display: flex;
+  gap: 122px;
+  padding: 120px;
+  margin: auto;
+}
+
+.apps {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 120px;
+}
+.app {
+  background-color: white;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.app img {
+  width: 100%;
+  margin: auto;
+}
+
+h1 {
+  font-size: 55px;
+  text-align: start;
+}
+p {
+  font-size: 16px;
+  text-align: start;
+}

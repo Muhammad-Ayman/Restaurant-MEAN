@@ -5,14 +5,21 @@
   </div>
 
   <div class="nav-links">
-    <a href="/menu">Home</a>
-    <a href="/reservations">About</a>
-    <a href="/contact">Menu</a>
-    <a href="/contact">Pages</a>
-    <a href="/contact">Contact</a>
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a routerLink="/About" routerLinkActive="active">About</a>
+    <a routerLink="/Menu" routerLinkActive="active">Menu</a>
+    <a routerLink="/book" routerLinkActive="active">Book</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
   </div>
 
   <div class="nav-buttons">
-    <button class="bn3">Book a table</button>
+    <button class="bn3" routerLink="/book" routerLinkActive="active">
+      Book a table
+    </button>
   </div>
 </nav>
