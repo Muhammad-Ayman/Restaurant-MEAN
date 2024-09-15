@@ -14,8 +14,9 @@
 
   <div class="cards">
     <app-mcard
-      *ngFor="let card of cards"
-      [src]="card.imgSrc"
+      *ngFor="let card of products"
+      routerLink="/product/{{ card.id }}"
+      [src]="card.thumbnail"
       [price]="card.price"
       [category]="card.title"
       [description]="card.description"
