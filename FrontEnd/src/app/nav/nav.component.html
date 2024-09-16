@@ -4,7 +4,13 @@
     <h1>Bistro Bliss</h1>
   </div>
 
-  <div class="nav-links">
+  <div
+    class="hamburger"
+    (click)="toggleMenu()"
+    [class.active]="isMenuOpen"
+  ></div>
+
+  <div class="nav-links" [class.show]="isMenuOpen">
     <a
       routerLink="/"
       routerLinkActive="active"
@@ -17,7 +23,7 @@
     <a routerLink="/contact" routerLinkActive="active">Contact</a>
   </div>
 
-  <div class="nav-buttons">
+  <div class="nav-buttons" *ngIf="!isMenuOpen">
     <button class="bn3" routerLink="/book" routerLinkActive="active">
       Book a table
     </button>

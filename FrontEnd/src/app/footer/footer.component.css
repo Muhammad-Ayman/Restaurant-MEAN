@@ -1,102 +1,93 @@
+a {
+  text-decoration: none;
+  color: #adb29e;
+}
+
+a:hover {
+  color: #5c5656;
+}
+
 footer {
-  height: 550px;
   width: 100%;
   background-color: #474747;
   color: white;
+  padding: 40px 20px;
 }
+
 .content {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 70px 100px;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 20px;
 }
 
-a {
-  text-decoration: none;
-}
-
+/* First part: Logo and description */
 .first-part {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 50px;
+  text-align: center;
+  gap: 20px;
 }
+
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
-h4 {
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-style: italic;
-  font-size: 30px;
-}
-p {
-  width: 293px;
+
+.first-part p {
+  width: 100%;
+  max-width: 293px;
   color: #adb29e;
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  text-align: center;
 }
 
-.second-part {
+/* Social media icons */
+.links {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-}
-header {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
+  gap: 10px;
 }
 
+.links a img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Second part: Pages links */
+.second-part,
 .third-part {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
-}
-a {
-  color: #adb29e;
-}
-a:hover {
-  color: #5c5656;
+  text-align: center;
+  gap: 10px;
 }
 
+/* Fourth part: Instagram images */
 .fourth-part {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;
   text-align: center;
-}
-
-.fourth-part h2 {
-  font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-size: 18px;
-  color: #ffffff;
-  margin-bottom: 15px;
 }
 
 .ig-imgs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Four columns of equal width */
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
 .img {
-  width: 100%; /* Makes the images fill their containers */
+  width: 100%;
   height: 130px;
-  aspect-ratio: 1; /* Keeps the images square */
   object-fit: cover;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .img:hover {
@@ -104,12 +95,17 @@ a:hover {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Footer copyright */
 .final {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 30px;
+  padding: 20px 0;
+}
+
+.final p {
+  color: #adb29e;
 }
 
 hr {
@@ -117,9 +113,53 @@ hr {
   width: 80vw;
 }
 
-.links {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 50px;
+  }
+  .first-part p {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 20px 30px;
+  }
+
+  .ig-imgs {
+    grid-template-columns: 1fr;
+  }
+
+  .first-part,
+  .second-part,
+  .third-part,
+  .fourth-part {
+    text-align: center;
+  }
+
+  .img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 10px 20px;
+  }
+
+  .links {
+    gap: 5px;
+  }
+
+  .img {
+    height: 100px;
+  }
+
+  hr {
+    width: 90vw;
+  }
 }
