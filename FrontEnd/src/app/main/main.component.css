@@ -1,7 +1,7 @@
 main {
   height: 100vh;
   background-image: url("./../../../public/image110.png");
-  background-position: left;
+  background-position: center;
 }
 
 h1 {
@@ -9,8 +9,8 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 100px;
-  font-weight: 300;
+  font-size: 6rem;
+
   color: #000000;
   text-align: center;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { MCardComponent } from '../mcard/mcard.component';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { input } from '@angular/core';
 @Component({
   selector: 'app-product',
   standalone: true,

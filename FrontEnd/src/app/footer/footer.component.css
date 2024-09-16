@@ -116,3 +116,10 @@ hr {
   background-color: #414536;
   width: 80vw;
 }
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}

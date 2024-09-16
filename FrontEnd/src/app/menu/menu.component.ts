@@ -29,6 +29,7 @@ export class MenuComponent implements OnInit {
       .get('https://dummyjson.com/products?limit=20')
       .subscribe((data: any) => {
         this.products = data['products'];
+        console.log(this.products);
       });
   }
 
