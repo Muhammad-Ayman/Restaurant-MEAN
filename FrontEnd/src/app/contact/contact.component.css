@@ -126,3 +126,21 @@ input[type="text"]::placeholder {
   font-weight: bold;
   font-size: 18px;
 }
+
+@media (max-width: 768px) {
+  .info-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .heading {
+    width: 100%;
+    padding-top: 20px;
+  }
+  p {
+    font-size: 14px;
+    text-align: center;
+  }
+}

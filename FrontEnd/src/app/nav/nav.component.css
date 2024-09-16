@@ -63,7 +63,7 @@ nav .logo {
   .nav-links {
     display: none;
     flex-direction: column;
-    position: absolute;
+
     top: 100%;
     left: 0;
     width: 100%;
