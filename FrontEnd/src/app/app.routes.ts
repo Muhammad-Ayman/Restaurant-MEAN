@@ -4,6 +4,8 @@ import { MenuComponent } from './menu/menu.component';
 import { BookComponent } from './book/book.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './product/product.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
   {
@@ -26,5 +28,14 @@ export const routes: Routes = [
     path: 'contact',
     component: ContactComponent,
   },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+  },
+
   { path: 'product/:id', component: ProductComponent },
 ];

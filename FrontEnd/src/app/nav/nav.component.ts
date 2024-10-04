@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { AuthService } from '../services/auth.service';
+import { Router } from 'express';
 @Component({
   selector: 'app-nav',
   standalone: true,

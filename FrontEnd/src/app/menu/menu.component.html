@@ -16,10 +16,10 @@
     <app-mcard
       *ngFor="let card of products"
       routerLink="/product/{{ card.id }}"
-      [src]="card.thumbnail"
-      [price]="card.price"
-      [category]="card.title"
-      [description]="card.description"
+      [src]="card.productImage[0]"
+      [price]="card.productPrice"
+      [category]="card.productCategory"
+      [description]="card.productName"
     ></app-mcard>
   </div>
 

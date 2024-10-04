@@ -25,12 +25,10 @@ export class MenuComponent implements OnInit {
   products: any[] = [];
 
   fetchProducts() {
-    this.http
-      .get('https://dummyjson.com/products?limit=20')
-      .subscribe((data: any) => {
-        this.products = data['products'];
-        console.log(this.products);
-      });
+    this.http.get(' http://localhost:8080/products').subscribe((data: any) => {
+      this.products = data;
+      console.log(this.products);
+    });
   }
 
   ngOnInit(): void {
