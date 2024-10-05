@@ -48,6 +48,7 @@ const login = async (req, res) => {
     let token = jwt.sign(
       {
         name: getUser.userName,
+        role: getUser.role,
       },
       process.env.JWTKEY,
       { expiresIn: "1h" } // Set token expiration if needed
@@ -56,11 +57,12 @@ const login = async (req, res) => {
     // Set the cookie with appropriate options
     res
       .cookie("jwt", token, {
-        httpOnly: true, // Helps mitigate XSS
+        httpOnly: false, // Helps mitigate XSS
       })
       .json({
         status: responseMsgs.SUCCESS,
         data: "Logged In Successfully",
+        role: getUser.role,
       });
   } catch (er) {
     console.log(er);

@@ -14,6 +14,7 @@ import { passwordMismatchValidator } from '../shared/password-mismatch.directive
 import { AuthService } from '../services/auth.service';
 import { RegisterPostData } from '../interfaces/auth';
 import { MessageService } from 'primeng/api';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-register',
@@ -25,6 +26,7 @@ import { MessageService } from 'primeng/api';
     PasswordModule,
     ButtonModule,
     RouterLink,
+    NgIf,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',

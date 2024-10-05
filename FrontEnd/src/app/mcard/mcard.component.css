@@ -8,20 +8,22 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  align-self: normal;
   gap: 15px;
   overflow: hidden;
-  display: border-box;
+  box-sizing: border-box; /* Updated this to box-sizing */
 }
+
 .card img {
   width: 306px;
   height: 230px;
 }
+
 h3 {
   font-size: 24px;
   font-weight: bold;
   color: #ad343e;
 }
+
 h5 {
   font-size: 20px;
   font-weight: bold;
@@ -31,6 +33,25 @@ p {
   font-size: 16px;
   text-align: center;
   margin: 10px;
+}
+
+.card-actions {
+  margin-top: auto; /* Ensure the icons are at the bottom */
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.card-actions i {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.card-actions i:hover {
+  color: #ad343e; /* Change color on hover */
 }
 
 .card:hover {

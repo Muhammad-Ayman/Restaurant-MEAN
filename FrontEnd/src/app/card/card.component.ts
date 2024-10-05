@@ -11,4 +11,5 @@ export class cardComponent {
   @Input() category?: string;
   @Input() src?: string;
   @Input() description?: string;
+  @Input() ref?: string;
 }

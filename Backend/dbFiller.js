@@ -1475,4 +1475,12 @@ const generate = async () => {
   //   }
 };
 
-generate();
+const ChangeCategory = async () => {
+  const data = await Product.find({ productCategory: "food" });
+  data.forEach(async (product) => {
+    product.productCategory = "Main Dish";
+    await product.save();
+  });
+};
+
+ChangeCategory();

@@ -15,8 +15,9 @@ export class ProductComponent implements OnInit {
   product: any = {};
   fetchProduct() {
     this.http
-      .get('https://dummyjson.com/product/' + this.productId)
+      .get('http://localhost:8080/products/' + this.productId)
       .subscribe((data: any) => {
+        console.log(data);
         this.product = data;
       });
   }

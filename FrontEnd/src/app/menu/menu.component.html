@@ -7,7 +7,11 @@
     </p>
   </div>
   <div class="buttons">
-    <button *ngFor="let button of buttons" class="bn3">
+    <button
+      *ngFor="let button of buttons"
+      (click)="queryProducts(button.link)"
+      class="bn3"
+    >
       {{ button.title }}
     </button>
   </div>
@@ -15,11 +19,14 @@
   <div class="cards">
     <app-mcard
       *ngFor="let card of products"
-      routerLink="/product/{{ card.id }}"
       [src]="card.productImage[0]"
+      routerLink="/product/{{ card._id }}"
       [price]="card.productPrice"
       [category]="card.productCategory"
       [description]="card.productName"
+      [id]="card._id"
+      [onDel1]="onDel"
+      [onEdit1]="onEdit"
     ></app-mcard>
   </div>
 

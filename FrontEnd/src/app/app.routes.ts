@@ -6,12 +6,17 @@ import { ContactComponent } from './contact/contact.component';
 import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
+import { EditComponent } from './edit/edit.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
   },
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'menu/:category', component: MenuComponent },
+  { path: 'edit/:id', component: EditComponent },
   {
     path: 'home',
     component: HomeComponent,
@@ -36,6 +41,8 @@ export const routes: Routes = [
     path: 'register',
     component: RegisterComponent,
   },
-
-  { path: 'product/:id', component: ProductComponent },
+  {
+    path: 'admin',
+    component: AdminAddProductComponent,
+  },
 ];

@@ -7,6 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { AuthService } from '../services/auth.service';
 import { MessageService } from 'primeng/api';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ import { MessageService } from 'primeng/api';
     PasswordModule,
     ButtonModule,
     RouterLink,
+    NgIf,
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
@@ -41,10 +43,11 @@ export class LoginComponent {
       userPassword: password,
     };
 
-    this.authService.getUserDetails(credentials).subscribe({
+    this.authService.login(credentials).subscribe({
       next: (response) => {
         if (response.status === 'success') {
-          sessionStorage.setItem('email', email);
+          sessionStorage.setItem('role', response.role);
+
           this.router.navigate(['home']);
         } else {
           this.messageService.add({
