@@ -7,6 +7,7 @@ const dotenv = require("dotenv");
 const app = express();
 const productsRoutes = require("./routes/productsRoutes");
 const usersRoutes = require("./routes/usersRoutes");
+const bookR = require("./routes/bookRoutes");
 
 dotenv.config();
 app.use(
@@ -28,4 +29,6 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use("/users", usersRoutes);
+app.use("/book", bookR);
+
 app.use("/products", productsRoutes);
